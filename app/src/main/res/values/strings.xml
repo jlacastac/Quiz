@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Quiz</string>
+
+    <string-array name="questions">
+        <item>10 y = 70</item>
+        <item>x 3 = 15</item>
+        <item>16 y = 32</item>
+        <item>Que tipo de animal es un gato</item>
+        <item>Quien la chupa mas</item>
+    </string-array>
+
+    <string-array name="answers">
+        <item>7</item>
+        <item>5</item>
+        <item>2</item>
+        <item>Felino</item>
+        <item>Jeremy</item>
+    </string-array>
+</resources>
