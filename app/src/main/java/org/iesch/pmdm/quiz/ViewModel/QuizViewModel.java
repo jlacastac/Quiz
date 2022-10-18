@@ -20,9 +20,8 @@ public class QuizViewModel extends ViewModel {
     private MutableLiveData<String> question = new MutableLiveData<>();
     private MutableLiveData<String> trueAnswer = new MutableLiveData<>();
     private MutableLiveData<String> falseAnswer = new MutableLiveData<>();
-
-
     private MutableLiveData<Integer> questionNumber = new MutableLiveData<>();
+
 
     public QuizViewModel () {
         resetQuiz();
@@ -56,14 +55,10 @@ public class QuizViewModel extends ViewModel {
     }
 
     public boolean checkAnswer (String answer) {
-
         return this.trueAnswer.getValue().equals(answer);
     }
 
     public MutableLiveData<String> getQuestion() {
-        if(question == null) {
-            question = new MutableLiveData<>();
-        }
         return question;
     }
 
@@ -74,11 +69,7 @@ public class QuizViewModel extends ViewModel {
     public MutableLiveData<Integer> getQuestionNumber() {
         return questionNumber;
     }
-
     public MutableLiveData<String> getTrueAnswer() {
-        if(trueAnswer == null) {
-            trueAnswer = new MutableLiveData<>();
-        }
         return trueAnswer;
     }
 }
