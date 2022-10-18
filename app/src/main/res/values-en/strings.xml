@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="next_button">Next</string>
+    <string name="win_text">RIGHT!!</string>
+    <string name="defeat_text">INCORRECT!!</string>
+    <string name="next_button_end_text">Start again</string>
+    <string name="end_text">Congratulations! You have finished the lesson!</string>
+    <string name="give_answer_text">Give an answer to the question.</string>
 </resources>

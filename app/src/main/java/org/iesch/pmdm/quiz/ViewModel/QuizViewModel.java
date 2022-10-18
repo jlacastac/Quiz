@@ -21,6 +21,7 @@ public class QuizViewModel extends ViewModel {
     private MutableLiveData<String> trueAnswer = new MutableLiveData<>();
     private MutableLiveData<String> falseAnswer = new MutableLiveData<>();
 
+
     private MutableLiveData<Integer> questionNumber = new MutableLiveData<>();
 
     public QuizViewModel () {
@@ -55,6 +56,7 @@ public class QuizViewModel extends ViewModel {
     }
 
     public boolean checkAnswer (String answer) {
+
         return this.trueAnswer.getValue().equals(answer);
     }
 
@@ -67,6 +69,10 @@ public class QuizViewModel extends ViewModel {
 
     public String getRandomAnswer() {
         return  answers[new Random().nextInt(answers.length)];
+    }
+
+    public MutableLiveData<Integer> getQuestionNumber() {
+        return questionNumber;
     }
 
     public MutableLiveData<String> getTrueAnswer() {
