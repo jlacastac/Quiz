@@ -12,17 +12,35 @@ import org.iesch.pmdm.quiz.QuizActivity;
 
 import java.security.Provider;
 
+/**
+ * Class that represent a QuizViewModel factory.
+ * 
+ */
 public class ViewModelFactory implements ViewModelProvider.Factory{
 
     private Context context;
 
+   /**
+    * Build a view model factory.
+    * 
+    */
     public ViewModelFactory(Context context) {
         this.context = context;
     }
 
+.   /**
+    * Create a new ViewModel
+    * 
+    * @return <T extends ViewModel> T
+    */
     @Override
     public  <T extends ViewModel> T create(Class<T> modelClass) {
-        return (T) new QuizViewModel(context);
+      
+      if(modelClass.equals(QuizViewModel.class)) {
+         return (T) new QuizViewModel(context);
+      }
+      
+      return (T) new ViewModel();
     }
 }
 

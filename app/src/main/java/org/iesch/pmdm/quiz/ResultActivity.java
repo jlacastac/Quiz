@@ -9,8 +9,7 @@ import org.iesch.pmdm.quiz.ViewModel.QuizViewModelSingleton;
 import org.iesch.pmdm.quiz.databinding.ActivityResultBinding;
 
 /**
- * Clase que representa la activity que te devuelve
- * el resultado de la pregunta contestada.
+ * Class that represents the result screen.
  *
  */
 public class ResultActivity extends AppCompatActivity {
@@ -26,8 +25,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     /**
-     * Inicializa las variables necesarias y prepara
-     * los componentes.
+     * Initialize variables and set everything needed.
      *
      */
     private void initialize () {
@@ -41,8 +39,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     /**
-     * Pone el texto que corresponde a los botones
-     * y TextViews.
+     * Set the texts of the result and the button.
      *
      */
     private void setComponentsTexts() {
@@ -62,7 +59,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     /**
-     * Estabelece los listeners de los botones.
+     * Set the button listeners
      *
      */
     private void setListeners() {
@@ -76,6 +73,11 @@ public class ResultActivity extends AppCompatActivity {
         });
     }
 
+   /**
+    * Get the quiz model.
+    * 
+    * @return QuizViewModel
+    */
     private QuizViewModel getQuizViewModel () {
         return QuizViewModelSingleton.getInstance();
     }

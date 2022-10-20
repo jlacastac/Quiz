@@ -9,6 +9,10 @@ import androidx.lifecycle.ViewModelStoreOwner;
 
 import org.iesch.pmdm.quiz.QuizActivity;
 
+/**
+ * Singleton of a QuizViewModel
+ *  
+ */
 public class QuizViewModelSingleton extends ViewModel{
 
     private static QuizViewModel viewModel;
@@ -16,12 +20,21 @@ public class QuizViewModelSingleton extends ViewModel{
     private static Context context;
     private static ViewModelStoreOwner viewModelStoreOwner;
 
+   /**
+    * Build a QuizViewModelSingleton.
+    * 
+    */
     public QuizViewModelSingleton(QuizActivity activity, ViewModelStoreOwner viewModelStoreOwner) {
         this.context = activity.getApplicationContext();
         this.viewModelStoreOwner = viewModelStoreOwner;
     }
 
-    @NonNull
+    /**
+    * Get the instance of the quiz, if its not created
+    * create a new one.
+    * 
+    * @return QuizViewModel
+    */
     public static QuizViewModel getInstance() {
         if (viewModel == null) {
             viewModel = new ViewModelProvider(viewModelStoreOwner,
