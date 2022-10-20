@@ -28,7 +28,7 @@ public class ViewModelFactory implements ViewModelProvider.Factory{
         this.context = context;
     }
 
-.   /**
+    /**
     * Create a new ViewModel
     * 
     * @return <T extends ViewModel> T
@@ -40,7 +40,7 @@ public class ViewModelFactory implements ViewModelProvider.Factory{
          return (T) new QuizViewModel(context);
       }
       
-      return (T) new ViewModel();
+      return null;
     }
 }
 

@@ -105,8 +105,8 @@ public class QuizActivity extends AppCompatActivity {
         radioButton1 = binding.radioButton1;
         radioButton2 = binding.radioButton2;
 
-        setText(questionTextView, R.string.give_answer_text);
-        setText(progressTextView, R.string.progress_0);
+        setText(questionTextView, getString(R.string.give_answer_text));
+        setText(progressTextView, getString(R.string.progress_0));
     }
 
    /**
@@ -123,8 +123,8 @@ public class QuizActivity extends AppCompatActivity {
    /**
     * Set one observer to the data and action.
     * 
-    * @param MutableLiveData
-    * @param TextView
+    * @param data
+    * @param component
     */ 
     private void setObserver (MutableLiveData data, TextView component) {
         data.observe(this, item -> {
@@ -141,8 +141,8 @@ public class QuizActivity extends AppCompatActivity {
    /**
     * Set a component text.
     * 
-    * @param TextView
-    * @param String
+    * @param component
+    * @param text
     */ 
     private void setText (TextView component, String text) {
         component.setText(text);
@@ -166,7 +166,7 @@ public class QuizActivity extends AppCompatActivity {
    /**
     * See the result of the question.
     * 
-    * @param boolean
+    * @param result
     */ 
     private void viewResult (boolean result) {
         changeActivity(getQuestionNumberValue(), result);
@@ -176,8 +176,8 @@ public class QuizActivity extends AppCompatActivity {
     * Change actual QuizActivity activity 
     * to ResultActivity.
     * 
-    * @param int
-    * @param boolean
+    * @param questionNumber
+    * @param result
     */ 
     private void changeActivity (int questionNumber, boolean result) {
 
@@ -199,7 +199,7 @@ public class QuizActivity extends AppCompatActivity {
     * 
     */ 
     private void setProgress () {
-        switch (getQuestionNumberValue() {
+        switch (getQuestionNumberValue()){
             case QUESTION_0:
                 setText(progressTextView, getString(R.string.progress_0));
                 progressBar.setProgress(PROGRESS_0);
@@ -229,7 +229,7 @@ public class QuizActivity extends AppCompatActivity {
    /**
     * Checks if the user answer is true.
     * 
-    * @param RadioButton
+    * @param radioButton
     * @return boolean
     */ 
     private boolean checkAnswer (RadioButton radioButton) {
