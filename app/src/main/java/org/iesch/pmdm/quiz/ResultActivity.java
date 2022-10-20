@@ -9,7 +9,7 @@ import org.iesch.pmdm.quiz.ViewModel.QuizViewModelSingleton;
 import org.iesch.pmdm.quiz.databinding.ActivityResultBinding;
 
 /**
- * Class that represents the result screen.
+ * Represents the result screen.
  *
  */
 public class ResultActivity extends AppCompatActivity {
@@ -34,7 +34,7 @@ public class ResultActivity extends AppCompatActivity {
 
         setContentView(binding.getRoot());
 
-        setComponentsTexts();
+        setComponentsText();
         setListeners();
     }
 
@@ -42,8 +42,8 @@ public class ResultActivity extends AppCompatActivity {
      * Set the texts of the result and the button.
      *
      */
-    private void setComponentsTexts() {
-        if(!extras.getBoolean(QuizActivity.END)) {
+    private void setComponentsText() {
+        if(extras.get(QuizActivity.END) == null) {
 
             if (extras.getBoolean(QuizActivity.RESULT)) {
                 binding.resultTextView.setText(R.string.win_text);

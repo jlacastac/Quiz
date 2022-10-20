@@ -18,13 +18,13 @@ import org.iesch.pmdm.quiz.ViewModel.QuizViewModelSingleton;
 import org.iesch.pmdm.quiz.databinding.ActivityMainBinding;
 
 /**
- * Class that represents the quiz.
+ * Represents the quiz view.
  * 
  */
 public class QuizActivity extends AppCompatActivity {
 
     /**
-     * Constants for the state of the game.
+     * Constants for the status of the game.
      * 
      */
     public static final String END = "end";
@@ -92,7 +92,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
    /**
-    * Obtain the components and set the text for them
+    * Obtain the components from the view and set the texts.
     * 
     */ 
     private void setComponents () {
@@ -106,7 +106,6 @@ public class QuizActivity extends AppCompatActivity {
         radioButton2 = binding.radioButton2;
 
         setText(questionTextView, getString(R.string.give_answer_text));
-        setText(progressTextView, getString(R.string.progress_0));
     }
 
    /**
@@ -121,7 +120,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
    /**
-    * Set one observer to the data and action.
+    * Set one observer
     * 
     * @param data
     * @param component
@@ -186,8 +185,6 @@ public class QuizActivity extends AppCompatActivity {
 
         if(getQuestionNumberValue() == QUESTION_2) {
             intent.putExtra(END, true);
-        } else {
-            intent.putExtra(END, false);
         }
 
         startActivity(intent);
@@ -309,7 +306,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
    /**
-    * Get the quiz.
+    * Get the quiz object.
     * 
     * return QuizViewModel
     */

@@ -13,7 +13,7 @@ import org.iesch.pmdm.quiz.QuizActivity;
  * Singleton of a QuizViewModel
  *  
  */
-public class QuizViewModelSingleton extends ViewModel{
+public class QuizViewModelSingleton {
 
     private static QuizViewModel viewModel;
 

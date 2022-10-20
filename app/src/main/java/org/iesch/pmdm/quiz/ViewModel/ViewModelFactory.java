@@ -13,7 +13,7 @@ import org.iesch.pmdm.quiz.QuizActivity;
 import java.security.Provider;
 
 /**
- * Class that represent a QuizViewModel factory.
+ * Represent a QuizViewModel factory.
  * 
  */
 public class ViewModelFactory implements ViewModelProvider.Factory{
@@ -22,7 +22,7 @@ public class ViewModelFactory implements ViewModelProvider.Factory{
 
    /**
     * Build a view model factory.
-    * 
+    *
     */
     public ViewModelFactory(Context context) {
         this.context = context;
